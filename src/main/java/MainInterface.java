@@ -1,8 +1,11 @@
+import org.jdatepicker.impl.JDatePanelImpl;
+import org.jdatepicker.impl.JDatePickerImpl;
+import org.jdatepicker.impl.UtilDateModel;
 
-import java.util.ArrayList;
-import javax.swing.JOptionPane;
+import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
-
+import java.util.ArrayList;
+import java.util.Properties;
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -21,17 +24,30 @@ private static final String UNCHECKED = "unchecked";
 	 */
 	private static final long serialVersionUID = 689823172646689247L;
 ArrayList<Food> foodlist;
-String header[] = new String[]{"Food Name", "Food Price", "Food Location"};
+String header[] = new String[]{"Numéro", "Date", "Raison sociale"};
 DefaultTableModel dtm;
 int row,col;
+
     /**
      * Creates new form MainInterface
      */
     public MainInterface() {
         initComponents();
         foodlist = new ArrayList<>();
+        foodlist.add(new Food("test", "MISC", 0));
+        foodlist.add(new Food("tst", "MISC", 0));
+        foodlist.add(new Food("test", "ISC", 0));
+        foodlist.add(new Food("test", "MISC", 0));
+        foodlist.add(new Food("test", "MISC", 0));
+        foodlist.add(new Food("test", "MISC", 0));
+
         dtm = new DefaultTableModel(header,0);
         jTable2.setModel(dtm);
+        dtm.setRowCount(0);//reset data model
+        for (int i = 0; i < foodlist.size(); i++) {
+            Object[] objs = {foodlist.get(i).foodname,foodlist.get(i).foodprice,foodlist.get(i).foodloc};
+            dtm.addRow(objs);
+        }
         this.setLocationRelativeTo(null);
     }
 
@@ -44,10 +60,22 @@ int row,col;
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+
+        UtilDateModel model = new UtilDateModel();
+//model.setDate(20,04,2014);
+// Need this...
+        Properties p = new Properties();
+        p.put("text.today", "Today");
+        p.put("text.month", "Month");
+        p.put("text.year", "Year");
+        JDatePanelImpl datePanel = new JDatePanelImpl(model, p);
+       
+// Don't know about the formatter, but there it is...
+
         jLabel1 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
-        jTextFoodName = new javax.swing.JTextField();
+        jTextDateDemande = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         jTextFoodPrice = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
@@ -63,12 +91,12 @@ int row,col;
         jLabel1.setText("jLabel1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Food Application");
+        setTitle("Application de monitoring");
         setResizable(false);
 
         jPanel1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
-        jLabel2.setText("Food Name");
+        jLabel2.setText("Date de la demande");
 
         jLabel3.setText("Food Price");
 
@@ -94,7 +122,7 @@ int row,col;
                             .addComponent(jLabel3))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextFoodName)
+                            .addComponent(jTextDateDemande)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(jTextFoodPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(0, 0, Short.MAX_VALUE))))
@@ -111,7 +139,7 @@ int row,col;
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
-                    .addComponent(jTextFoodName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextDateDemande, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel3)
@@ -125,19 +153,19 @@ int row,col;
 
         jPanel2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
-        jButton1.setText("Add");
+       /* jButton1.setText("Add");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
-        });
+        });*/
 
-        jButton2.setText("Delete");
+       /* jButton2.setText("Delete");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
-        });
+        });*/
 
         jButton3.setText("Update");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -159,9 +187,9 @@ int row,col;
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                //.addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
+                //.addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
                 .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
@@ -173,8 +201,8 @@ int row,col;
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                   // .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                   // .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
@@ -227,10 +255,16 @@ int row,col;
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        String foodname = jTextFoodName.getText();
-        double foodprice = Double.parseDouble(jTextFoodPrice.getText());
-        String foodloc = jCBFoodLocation.getSelectedItem().toString();
-        foodlist.add(new Food(foodname,foodloc,foodprice));
+        //String foodname = jTextDateDemande.getText();
+        //double foodprice = Double.parseDouble(jTextFoodPrice.getText());
+       // String foodloc = jCBFoodLocation.getSelectedItem().toString();
+        //foodlist.add(new Food(foodname,foodloc,foodprice));
+        foodlist.add(new Food("test", "MISC", 0));
+        foodlist.add(new Food("tst", "MISC", 0));
+        foodlist.add(new Food("test", "ISC", 0));
+        foodlist.add(new Food("test", "MISC", 0));
+        foodlist.add(new Food("test", "MISC", 0));
+        foodlist.add(new Food("test", "MISC", 0));
         dtm.setRowCount(0);//reset data model
         for (int i = 0; i < foodlist.size(); i++) {
             Object[] objs = {foodlist.get(i).foodname,foodlist.get(i).foodprice,foodlist.get(i).foodloc};
@@ -241,8 +275,8 @@ int row,col;
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void clearField(){
-        jTextFoodName.requestFocus();
-        jTextFoodName.setText("");
+        jTextDateDemande.requestFocus();
+        jTextDateDemande.setText("");
         jTextFoodPrice.setText("");
         jCBFoodLocation.setSelectedIndex(0);
     }
@@ -251,7 +285,7 @@ int row,col;
         row = jTable2.getSelectedRow();
         col = jTable2.getColumnCount();
         System.out.println(row+","+col);
-        jTextFoodName.setText(dtm.getValueAt(row, 0).toString());
+        jTextDateDemande.setText(dtm.getValueAt(row, 0).toString());
         jTextFoodPrice.setText(dtm.getValueAt(row, 1).toString());
         String location = dtm.getValueAt(row, 2).toString();
         for (int i = 0; i<(jCBFoodLocation.getItemCount());i++){
@@ -288,7 +322,7 @@ int row,col;
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
-        String updatedfoodname = jTextFoodName.getText();
+        String updatedfoodname = jTextDateDemande.getText();
         double updatedfoodprice = Double.parseDouble(jTextFoodPrice.getText());
         String updatedfoodloc = jCBFoodLocation.getSelectedItem().toString();
         foodlist.get(row).foodname = updatedfoodname;
@@ -303,11 +337,11 @@ int row,col;
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
-        String input = JOptionPane.showInputDialog(this,"Search Food Name:");
+      /*  String input = JOptionPane.showInputDialog(this,"Rechercher une demande:");
         for (int i = 0; i < foodlist.size(); i++) {
             if (foodlist.get(i).foodname.equalsIgnoreCase(input)){
-                JOptionPane.showMessageDialog(jButton4, "Found!!!","Search Food",2);
-                jTextFoodName.setText(foodlist.get(i).foodname);
+                JOptionPane.showMessageDialog(jButton4, "Found!!!","Rechercher",2);
+                jTextDateDemande.setText(foodlist.get(i).foodname);
                 jTextFoodPrice.setText(String.valueOf(foodlist.get(i).foodprice));
                 String location = foodlist.get(i).foodloc;
                  for (int j = 0; j<(jCBFoodLocation.getItemCount());j++){
@@ -318,7 +352,35 @@ int row,col;
                  return;//Quit after found
             }
         }
-        JOptionPane.showMessageDialog(jButton4, "Not Found!!!","Search Food",2);
+        JOptionPane.showMessageDialog(jButton4, "Not Found!!!","Rechercher une demande",2);*/
+        System.out.println(this.jTextDateDemande.getText());
+
+        for (int i = 0; i < foodlist.size(); i++) {
+            if (foodlist.get(i).foodname.equalsIgnoreCase(this.jTextDateDemande.getText())){
+                JOptionPane.showMessageDialog(jButton4, "Found!!!","Rechercher une demande",2);
+                //jTextDateDemande.setText(foodlist.get(i).foodname);
+                //jTextFoodPrice.setText(String.valueOf(foodlist.get(i).foodprice));
+                //String location = foodlist.get(i).foodloc;
+
+                 /*   for (int j = 0; j<(jCBFoodLocation.getItemCount());j++){
+                if (jCBFoodLocation.getItemAt(i).equalsIgnoreCase(location)){
+                        jCBFoodLocation.setSelectedIndex(i);
+                    }
+                }*/
+                 Food foodItem = new Food(foodlist.get(i).foodname,foodlist.get(i).foodloc,  foodlist.get(i).foodprice);
+                 foodlist = new ArrayList<>();
+                 foodlist.add(foodItem);
+                dtm.setRowCount(0);//reset data model
+                for (int j = 0; j < foodlist.size(); j++) {
+                    Object[] objs = {foodlist.get(j).foodname,foodlist.get(j).foodprice,foodlist.get(j).foodloc};
+                    dtm.addRow(objs);
+                }
+                System.out.println(dtm.getRowCount());
+                System.out.println(foodlist);
+                return;//Quit after found
+            }
+        }
+
 
     }//GEN-LAST:event_jButton4ActionPerformed
 
@@ -371,7 +433,7 @@ int row,col;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JTable jTable2;
-    private javax.swing.JTextField jTextFoodName;
+    private javax.swing.JTextField jTextDateDemande;
     private javax.swing.JTextField jTextFoodPrice;
     // End of variables declaration//GEN-END:variables
 }
