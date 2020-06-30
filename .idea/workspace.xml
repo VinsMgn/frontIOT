@@ -2,19 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ce1462e1-3ceb-418a-b2f5-02d2ac377f0c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_json_json_20200518.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodapplication.iml" beforeDir="false" afterPath="$PROJECT_DIR$/foodapplication.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MainInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MainInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/webservice/Webservice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/webservice/Webservice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/MainInterface$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/MainInterface$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/MainInterface$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/MainInterface$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/MainInterface$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/MainInterface$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/MainInterface$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/MainInterface$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/MainInterface$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/MainInterface$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/MainInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/MainInterface.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/webservice/Webservice.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/webservice/Webservice.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -121,7 +109,7 @@
       <workItem from="1592927123915" duration="1197000" />
       <workItem from="1592987948281" duration="611000" />
       <workItem from="1593425536738" duration="11877000" />
-      <workItem from="1593495715535" duration="3723000" />
+      <workItem from="1593495715535" duration="4328000" />
     </task>
     <servers />
   </component>

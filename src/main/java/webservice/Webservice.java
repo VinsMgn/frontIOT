@@ -74,7 +74,7 @@ public class Webservice {
                 .thenApply(Webservice::parseJSON)
                 .thenAccept(System.out::println).join();
     }
-    
+
     public static String parseJSON(String responseBody){
         JSONArray albums = new JSONArray(responseBody);
         for(int i = 0; i < albums.length(); i++){
