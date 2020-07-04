@@ -5,27 +5,27 @@ import java.util.UUID;
 
 public class Tournee {
 
-    private UUID noTournee;
+    private Integer noTournee;
     private Date dateTournee;
-    private UUID noImmatCamion;
-    private UUID noEmploye;
+    private String noImmatCamion;
+    private String nomEmploye;
 
-    public Tournee(UUID noTournee, Date dateTournee, UUID noImmatCamion, UUID noEmploye) {
+    public Tournee(Integer noTournee, Date dateTournee, String noImmatCamion, String nomEmploye) {
         this.noTournee = noTournee;
         this.dateTournee = dateTournee;
         this.noImmatCamion = noImmatCamion;
-        this.noEmploye = noEmploye;
+        this.nomEmploye = nomEmploye;
     }
 
     public Tournee() {
 
     }
 
-    public UUID getNoTournee() {
+    public Integer getNoTournee() {
         return noTournee;
     }
 
-    public void setNoTournee(UUID noTournee) {
+    public void setNoTournee(Integer noTournee) {
         this.noTournee = noTournee;
     }
 
@@ -37,19 +37,19 @@ public class Tournee {
         this.dateTournee = dateTournee;
     }
 
-    public UUID getNoImmatCamion() {
+    public String getNoImmatCamion() {
         return noImmatCamion;
     }
 
-    public void setNoImmatCamion(UUID noImmatCamion) {
+    public void setNoImmatCamion(String noImmatCamion) {
         this.noImmatCamion = noImmatCamion;
     }
 
-    public UUID getNoEmploye() {
-        return noEmploye;
+    public String getNoEmploye() {
+        return nomEmploye;
     }
 
-    public void setNoEmploye(UUID noEmploye) {
-        this.noEmploye = noEmploye;
+    public void setNoEmploye(String nomEmploye) {
+        this.nomEmploye = nomEmploye;
     }
 }

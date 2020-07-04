@@ -63,13 +63,16 @@ public class Login extends JFrame implements ActionListener {
         String password = passwordText.getText();
         System.out.println(user + "," + password);
 
-        if (user.equalsIgnoreCase("admin") && password.equalsIgnoreCase("password")) {
-            succes.setText("Login successful!");
-            dispose();
-            SecondFrame frame = new SecondFrame();
-        } else {
-            succes.setText("Invalid credentials");
-        }
+        dispose();
+        SecondFrame frame = new SecondFrame();
+
+//        if (user.equalsIgnoreCase("admin") && password.equalsIgnoreCase("password")) {
+//            succes.setText("Login successful!");
+//            dispose();
+//            SecondFrame frame = new SecondFrame();
+//        } else {
+//            succes.setText("Invalid credentials");
+//        }
     }
 
 }

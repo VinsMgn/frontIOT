@@ -20,12 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ce1462e1-3ceb-418a-b2f5-02d2ac377f0c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/frontElement/Content.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/frontElement/Content.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Data/Tournee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Data/Tournee.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/frontElement/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/frontElement/Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/frontElement/SecondFrame.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/frontElement/SecondFrame.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/frontElement/SecondFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/frontElement/SecondFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Data/Tournee.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Data/Tournee.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/frontElement/Login.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/frontElement/Login.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/frontElement/SecondFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/frontElement/SecondFrame.class" afterDir="false" />
     </list>
@@ -38,6 +38,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -75,6 +76,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -82,6 +84,9 @@
     <property name="settings.editor.selected.configurable" value="copyright" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="frontElement" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\EPSI\Cours_B3\MSPR_IOT\frontIOT\src\main\java\frontElement" />
       <recent name="D:\EPSI\Cours_B3\MSPR_IOT\frontIOT\src\main\java" />
@@ -143,7 +148,7 @@
       <workItem from="1592987948281" duration="611000" />
       <workItem from="1593425536738" duration="11877000" />
       <workItem from="1593495715535" duration="4328000" />
-      <workItem from="1593874419348" duration="17063000" />
+      <workItem from="1593874419348" duration="23035000" />
     </task>
     <servers />
   </component>
@@ -163,6 +168,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="726" y="63" key="#Auto_Import" timestamp="1593898385260">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="726" y="63" key="#Auto_Import/0.0.1920.1040@0.0.1920.1040" timestamp="1593898385260" />
     <state x="740" y="183" key="#com.intellij.codeInsight.i18n.I18nizeQuickFixDialog_Form" timestamp="1593891789094">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -191,42 +200,46 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="795" y="229" key="CreateSnapShotAction.MyDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1593895773057" />
-    <state width="1877" height="177" key="GridCell.Tab.0.bottom" timestamp="1593896362040">
+    <state width="1877" height="208" key="GridCell.Tab.0.bottom" timestamp="1593903768140">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="177" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1593896362040" />
-    <state width="1877" height="177" key="GridCell.Tab.0.center" timestamp="1593896362039">
+    <state width="1877" height="208" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1593903768140" />
+    <state width="1877" height="208" key="GridCell.Tab.0.center" timestamp="1593903768140">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="177" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1593896362039" />
-    <state width="1877" height="177" key="GridCell.Tab.0.left" timestamp="1593896362039">
+    <state width="1877" height="208" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1593903768140" />
+    <state width="1877" height="208" key="GridCell.Tab.0.left" timestamp="1593903768140">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="177" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1593896362039" />
-    <state width="1877" height="177" key="GridCell.Tab.0.right" timestamp="1593896362040">
+    <state width="1877" height="208" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1593903768140" />
+    <state width="1877" height="208" key="GridCell.Tab.0.right" timestamp="1593903768140">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="177" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1593896362040" />
-    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1593894257524">
+    <state width="1877" height="208" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1593903768140" />
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1593903768138">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1593894257524" />
-    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1593894257524">
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1593903768138" />
+    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1593903768137">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1593894257524" />
-    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1593894257524">
+    <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1593903768137" />
+    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1593903768137">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1593894257524" />
-    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1593894257524">
+    <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1593903768137" />
+    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1593903768138">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1593894257524" />
+    <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1593903768138" />
     <state x="406" y="36" width="1274" height="853" key="SettingsEditor" timestamp="1593894115106">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="406" y="36" width="1274" height="853" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1593894115106" />
+    <state width="498" height="446" key="SwitcherDM" timestamp="1593902476849">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="498" height="446" key="SwitcherDM/0.0.1920.1040@0.0.1920.1040" timestamp="1593902476849" />
     <state x="1170" y="284" key="extract.method.dialog" timestamp="1593890801149">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -235,9 +248,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="667" y="253" width="585" height="534" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1593882139880" />
-    <state x="616" y="240" key="run.anything.popup" timestamp="1592676566544">
+    <state x="616" y="240" key="run.anything.popup" timestamp="1593900726370">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1592676566544" />
+    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1593900726370" />
   </component>
 </project>
