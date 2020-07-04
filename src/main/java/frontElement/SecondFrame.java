@@ -21,6 +21,7 @@ public class SecondFrame extends JFrame implements ActionListener {
 
 
     public static void main(String[] args) {
+        SecondFrame frame= new SecondFrame();
 
     }
 

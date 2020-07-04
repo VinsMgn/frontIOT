@@ -21,7 +21,7 @@ public class Login extends JFrame implements ActionListener {
     public static void main(String[] args) {
         JFrame frame = new JFrame();
         JPanel panel = new JPanel();
-        userLabel = new JLabel("Data.User");
+        userLabel = new JLabel("User");
 
         frame.setSize(350,200);
         frame.setTitle("Login");
@@ -65,8 +65,10 @@ public class Login extends JFrame implements ActionListener {
 
         if (user.equalsIgnoreCase("admin") && password.equalsIgnoreCase("password")) {
             succes.setText("Login successful!");
+            dispose();
+            SecondFrame frame = new SecondFrame();
         } else {
-            succes.setText("Failed to login");
+            succes.setText("Invalid credentials");
         }
     }
 
