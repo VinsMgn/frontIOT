@@ -12,4 +12,75 @@ public class Entreprise {
     private String city;
     private Integer telephone;
     private String contact;
+
+    public Entreprise(){
+
+    }
+
+    public Entreprise(UUID siret, String raisonSociale, Integer noRue, String rue, Integer codePostal, String city, Integer telephone, String contact) {
+        this.siret = siret;
+        this.raisonSociale = raisonSociale;
+        this.noRue = noRue;
+        this.rue = rue;
+        this.codePostal = codePostal;
+        this.city = city;
+        this.telephone = telephone;
+        this.contact = contact;
+    }
+
+    public Integer getNoRue() {
+        return noRue;
+    }
+
+    public void setNoRue(Integer noRue) {
+        this.noRue = noRue;
+    }
+
+    public String getRue() {
+        return rue;
+    }
+
+    public void setRue(String rue) {
+        this.rue = rue;
+    }
+
+    public Integer getCodePostal() {
+        return codePostal;
+    }
+
+    public void setCodePostal(Integer codePostal) {
+        this.codePostal = codePostal;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public Integer getTelephone() {
+        return telephone;
+    }
+
+    public void setTelephone(Integer telephone) {
+        this.telephone = telephone;
+    }
+
+    public String getContact() {
+        return contact;
+    }
+
+    public void setContact(String contact) {
+        this.contact = contact;
+    }
+
+    public UUID getSiret() {
+        return siret;
+    }
+
+    public void setSiret(UUID siret) {
+        this.siret = siret;
+    }
 }
