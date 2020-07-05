@@ -4,14 +4,14 @@ import java.util.UUID;
 
 public class CentreTraitement {
 
-    private UUID noCentre;
+    private Integer noCentre;
     private String nomCentre;
     private Integer noRueCentre;
     private String rueCentre;
     private Integer codePostalCentre;
     private String cityCentre;
 
-    public CentreTraitement(UUID noCentre, String nomCentre, Integer noRueCentre, String rueCentre, Integer codePostalCentre, String cityCentre) {
+    public CentreTraitement(Integer noCentre, String nomCentre, Integer noRueCentre, String rueCentre, Integer codePostalCentre, String cityCentre) {
         this.noCentre = noCentre;
         this.nomCentre = nomCentre;
         this.noRueCentre = noRueCentre;
@@ -24,11 +24,11 @@ public class CentreTraitement {
 
     }
 
-    public UUID getNoCentre() {
+    public Integer getNoCentre() {
         return noCentre;
     }
 
-    public void setNoCentre(UUID noCentre) {
+    public void setNoCentre(Integer noCentre) {
         this.noCentre = noCentre;
     }
 

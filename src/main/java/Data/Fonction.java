@@ -1,16 +1,15 @@
 package Data;
 
-import java.util.UUID;
 
 public class Fonction {
-    private UUID noFonction;
+    private Integer noFonction;
     private String nomFonction;
 
-    public UUID getNoFonction() {
+    public Integer getNoFonction() {
         return noFonction;
     }
 
-    public void setNoFonction(UUID noFonction) {
+    public void setNoFonction(Integer noFonction) {
         this.noFonction = noFonction;
     }
 
@@ -22,7 +21,7 @@ public class Fonction {
         this.nomFonction = nomFonction;
     }
 
-    public Fonction(UUID noFonction, String nomFonction) {
+    public Fonction(Integer noFonction, String nomFonction) {
         this.noFonction = noFonction;
         this.nomFonction = nomFonction;
     }

@@ -3,7 +3,6 @@ package frontElement;
 import Data.Tournee;
 
 import javax.swing.*;
-import javax.swing.border.EmptyBorder;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -73,11 +72,12 @@ public class SecondFrame extends JFrame implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if(e.getSource() == empButton) {
-            System.out.println("employé");
+            dispose();
+            EmployeeContent newFrame = new EmployeeContent();
         } else {
-            System.out.println("Centre de traitement");
+            dispose();
+            CentreContent centreFrame = new CentreContent();
         }
-//        System.out.println("employé");
     }
 
 
