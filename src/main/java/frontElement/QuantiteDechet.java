@@ -28,18 +28,18 @@ public class QuantiteDechet extends JFrame implements ActionListener {
 
         typeDechets = initTypeDechet();
         String[][] data = {
-                {typeDechets.get(0).getNomTypeDechet(), "150"},
-                {typeDechets.get(1).getNomTypeDechet(), "150"},
-                {typeDechets.get(2).getNomTypeDechet(), "150"},
-                {typeDechets.get(3).getNomTypeDechet(), "150"},
-                {typeDechets.get(4).getNomTypeDechet(), "150"},
-                {typeDechets.get(5).getNomTypeDechet(), "150"},
-                {typeDechets.get(6).getNomTypeDechet(), "150"},
-                {typeDechets.get(7).getNomTypeDechet(), "150"},
-                {typeDechets.get(8).getNomTypeDechet(), "150"},
-                {typeDechets.get(9).getNomTypeDechet(), "150"},
-                {typeDechets.get(10).getNomTypeDechet(), "150"},
-                {typeDechets.get(11).getNomTypeDechet(), "150"},
+                {typeDechets.get(0).getNomTypeDechet(), "1500"},
+                {typeDechets.get(1).getNomTypeDechet(), "1050"},
+                {typeDechets.get(2).getNomTypeDechet(), "1000"},
+                {typeDechets.get(3).getNomTypeDechet(), "950"},
+                {typeDechets.get(4).getNomTypeDechet(), "1250"},
+                {typeDechets.get(5).getNomTypeDechet(), "1470"},
+                {typeDechets.get(6).getNomTypeDechet(), "1530"},
+                {typeDechets.get(7).getNomTypeDechet(), "2100"},
+                {typeDechets.get(8).getNomTypeDechet(), "2300"},
+                {typeDechets.get(9).getNomTypeDechet(), "2400"},
+                {typeDechets.get(10).getNomTypeDechet(), "2700"},
+                {typeDechets.get(11).getNomTypeDechet(), "2800"},
         };
         String[] columnNames = { "Type de déchet", "Quantité collectée"
         };
@@ -83,8 +83,6 @@ public class QuantiteDechet extends JFrame implements ActionListener {
         typeDechets.add(t12);
         return typeDechets;
     }
-
-
 
 
     @Override

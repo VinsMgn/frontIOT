@@ -1,10 +1,6 @@
 package frontElement;
 
 import Data.Tournee;
-import Utils.DateLabelFormatter;
-import org.jdatepicker.impl.JDatePanelImpl;
-import org.jdatepicker.impl.JDatePickerImpl;
-import org.jdatepicker.impl.UtilDateModel;
 
 import javax.swing.*;
 import java.awt.*;
@@ -13,7 +9,6 @@ import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
-import java.util.Properties;
 
 public class SecondFrame extends JFrame implements ActionListener {
 
@@ -23,6 +18,7 @@ public class SecondFrame extends JFrame implements ActionListener {
     private JButton tourneeButton;
     private JButton detailTourneButton;
     private JButton detailTypeDechet;
+    private JButton nombreTournee;
 
 
     private ArrayList<Tournee> myList = new ArrayList<>();
@@ -50,8 +46,13 @@ public class SecondFrame extends JFrame implements ActionListener {
                 { myList.get(3).getNoTournee().toString(),myList.get(3).getDateTournee().toString(), myList.get(3).getNoImmatCamion(), myList.get(3).getNoEmploye() },
                 { myList.get(4).getNoTournee().toString(),myList.get(4).getDateTournee().toString(), myList.get(4).getNoImmatCamion(), myList.get(4).getNoEmploye() },
                 { myList.get(5).getNoTournee().toString(),myList.get(5).getDateTournee().toString(), myList.get(5).getNoImmatCamion(), myList.get(5).getNoEmploye() },
+                { myList.get(6).getNoTournee().toString(),myList.get(6).getDateTournee().toString(), myList.get(6).getNoImmatCamion(), myList.get(6).getNoEmploye() },
+                { myList.get(7).getNoTournee().toString(),myList.get(7).getDateTournee().toString(), myList.get(7).getNoImmatCamion(), myList.get(7).getNoEmploye() },
+                { myList.get(8).getNoTournee().toString(),myList.get(8).getDateTournee().toString(), myList.get(8).getNoImmatCamion(), myList.get(8).getNoEmploye() },
+                { myList.get(9).getNoTournee().toString(),myList.get(9).getDateTournee().toString(), myList.get(9).getNoImmatCamion(), myList.get(9).getNoEmploye() },
+                { myList.get(10).getNoTournee().toString(),myList.get(10).getDateTournee().toString(), myList.get(10).getNoImmatCamion(), myList.get(10).getNoEmploye() },
         };
-        String[] columnNames = { "N° Tournée", "Date", "Immat Camion", "Employee" };
+        String[] columnNames = { "N° Tournée", "Date", "Immat Camion", "Employé" };
 
 
         table = new JTable(data,columnNames);
@@ -90,6 +91,11 @@ public class SecondFrame extends JFrame implements ActionListener {
         panel.add(detailTypeDechet);
         detailTypeDechet.addActionListener(this);
 
+        nombreTournee = new JButton("Agent ayant réalisé moins de 5 tournées");
+        nombreTournee.setBounds(600, 320,300,50);
+        panel.add(nombreTournee);
+        nombreTournee.addActionListener(this);
+
         frame.setVisible(true);
 
 
@@ -112,6 +118,9 @@ public class SecondFrame extends JFrame implements ActionListener {
         } else if (e.getSource() == detailTypeDechet) {
             dispose();
             QuantiteDechet quantiteDechet = new QuantiteDechet();
+        } else if (e.getSource() == nombreTournee) {
+            dispose();
+            NombreTournee nombreTournee = new NombreTournee();
         }
     }
 
@@ -120,10 +129,17 @@ public class SecondFrame extends JFrame implements ActionListener {
     public ArrayList<Tournee> initTournee() {
         ArrayList<Tournee> tournees = new ArrayList<Tournee>();
         Tournee t1 = new Tournee(1, new Date(Calendar.YEAR, Calendar.JUNE,15), "532DFC95", "Antoine");
-        Tournee t2 = new Tournee(2, new Date(Calendar.YEAR, Calendar.JUNE,13), "763OPE95", "Gabriel");
         Tournee t3 = new Tournee(3, new Date(Calendar.YEAR, Calendar.JUNE,12), "532DFC95", "Antoine");
-        Tournee t4 = new Tournee(4, new Date(Calendar.YEAR, Calendar.MAY,12), "124FAK95", "Marcus");
+        Tournee t7 = new Tournee(7, new Date(Calendar.YEAR, Calendar.APRIL,12), "532DFC95", "Antoine");
+        Tournee t8 = new Tournee(8, new Date(Calendar.YEAR, Calendar.FEBRUARY,12), "532DFC95", "Antoine");
+
+        Tournee t2 = new Tournee(2, new Date(Calendar.YEAR, Calendar.JUNE,13), "763OPE95", "Gabriel");
         Tournee t5 = new Tournee(5, new Date(Calendar.YEAR, Calendar.JUNE,16), "532DFC95", "Gabriel");
+        Tournee t9 = new Tournee(9, new Date(119, Calendar.DECEMBER,16), "763OPE95", "Gabriel");
+        Tournee t10 = new Tournee(10, new Date(Calendar.YEAR, Calendar.JUNE,10), "532DFC95", "Gabriel");
+        Tournee t11 = new Tournee(11, new Date(Calendar.YEAR, Calendar.JUNE,7), "763OPE95", "Gabriel");
+
+        Tournee t4 = new Tournee(4, new Date(Calendar.YEAR, Calendar.MAY,12), "124FAK95", "Marcus");
         Tournee t6 = new Tournee(6, new Date(Calendar.YEAR, Calendar.JUNE,20), "124FAK95", "Marcus");
 
 
@@ -133,6 +149,11 @@ public class SecondFrame extends JFrame implements ActionListener {
         tournees.add(t4);
         tournees.add(t5);
         tournees.add(t6);
+        tournees.add(t7);
+        tournees.add(t8);
+        tournees.add(t9);
+        tournees.add(t10);
+        tournees.add(t11);
 
         return tournees;
     }
