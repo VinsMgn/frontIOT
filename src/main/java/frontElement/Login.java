@@ -61,7 +61,6 @@ public class Login extends JFrame implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         String user = userText.getText();
         String password = passwordText.getText();
-        System.out.println(user + "," + password);
 
         dispose();
         SecondFrame frame = new SecondFrame();

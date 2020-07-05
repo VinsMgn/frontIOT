@@ -1,23 +1,22 @@
 package Data;
 
-import java.util.UUID;
 
 public class TypeDechet {
-    private UUID noTypeDechet;
+    private Integer noTypeDechet;
     private String nomTypeDechet;
     private Integer nivDanger;
 
-    public TypeDechet(UUID noTypeDechet, String nomTypeDechet, Integer nivDanger) {
+    public TypeDechet(Integer noTypeDechet, String nomTypeDechet, Integer nivDanger) {
         this.noTypeDechet = noTypeDechet;
         this.nomTypeDechet = nomTypeDechet;
         this.nivDanger = nivDanger;
     }
 
-    public UUID getNoTypeDechet() {
+    public Integer getNoTypeDechet() {
         return noTypeDechet;
     }
 
-    public void setNoTypeDechet(UUID noTypeDechet) {
+    public void setNoTypeDechet(Integer noTypeDechet) {
         this.noTypeDechet = noTypeDechet;
     }
 

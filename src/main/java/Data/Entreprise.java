@@ -1,10 +1,9 @@
 package Data;
 
-import java.util.UUID;
 
 public class Entreprise {
 
-    private UUID siret;
+    private Integer siret;
     private String raisonSociale;
     private Integer noRue;
     private String rue;
@@ -17,7 +16,7 @@ public class Entreprise {
 
     }
 
-    public Entreprise(UUID siret, String raisonSociale, Integer noRue, String rue, Integer codePostal, String city, Integer telephone, String contact) {
+    public Entreprise(Integer  siret, String raisonSociale, Integer noRue, String rue, Integer codePostal, String city, Integer telephone, String contact) {
         this.siret = siret;
         this.raisonSociale = raisonSociale;
         this.noRue = noRue;
@@ -26,6 +25,14 @@ public class Entreprise {
         this.city = city;
         this.telephone = telephone;
         this.contact = contact;
+    }
+
+    public String getRaisonSociale() {
+        return raisonSociale;
+    }
+
+    public void setRaisonSociale(String raisonSociale) {
+        this.raisonSociale = raisonSociale;
     }
 
     public Integer getNoRue() {
@@ -76,11 +83,11 @@ public class Entreprise {
         this.contact = contact;
     }
 
-    public UUID getSiret() {
+    public Integer  getSiret() {
         return siret;
     }
 
-    public void setSiret(UUID siret) {
+    public void setSiret(Integer  siret) {
         this.siret = siret;
     }
 }
