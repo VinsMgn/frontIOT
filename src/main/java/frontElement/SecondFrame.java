@@ -19,7 +19,7 @@ public class SecondFrame extends JFrame implements ActionListener {
     private JButton detailTourneButton;
     private JButton detailTypeDechet;
     private JButton nombreTournee;
-
+    private JButton entrepriseDemande;
 
     private ArrayList<Tournee> myList = new ArrayList<>();
     private JPanel panel;
@@ -52,7 +52,7 @@ public class SecondFrame extends JFrame implements ActionListener {
                 { myList.get(9).getNoTournee().toString(),myList.get(9).getDateTournee().toString(), myList.get(9).getNoImmatCamion(), myList.get(9).getNoEmploye() },
                 { myList.get(10).getNoTournee().toString(),myList.get(10).getDateTournee().toString(), myList.get(10).getNoImmatCamion(), myList.get(10).getNoEmploye() },
         };
-        String[] columnNames = { "N° Tournée", "Date", "Immat Camion", "Employé" };
+        String[] columnNames = { "Nï¿½ Tournï¿½e", "Date", "Immat Camion", "Employï¿½" };
 
 
         table = new JTable(data,columnNames);
@@ -60,11 +60,11 @@ public class SecondFrame extends JFrame implements ActionListener {
         panel.add(table.getTableHeader(), BorderLayout.NORTH);
         panel.add(table, BorderLayout.CENTER);
 
-        JLabel informationTournee = new JLabel("Informations sur les tournées");
+        JLabel informationTournee = new JLabel("Informations sur les tournï¿½es");
         informationTournee.setBounds(350,15,200,50);
         panel.add(informationTournee);
 
-        empButton = new JButton("Voir les employés");
+        empButton = new JButton("Voir les employï¿½s");
         empButton.setBounds(600,20,150,50);
         panel.add(empButton);
         empButton.addActionListener(this);
@@ -75,26 +75,31 @@ public class SecondFrame extends JFrame implements ActionListener {
         panel.add(centreButton);
         centreButton.addActionListener(this);
 
-        tourneeButton = new JButton("Voir une demande à partir d'une date");
+        tourneeButton = new JButton("Voir une demande ï¿½ partir d'une date");
         tourneeButton.setBounds(600, 140,250,50);
         panel.add(tourneeButton);
         tourneeButton.addActionListener(this);
 
 
-        detailTourneButton = new JButton("Voir les détails d'une demande");
+        detailTourneButton = new JButton("Voir les dï¿½tails d'une demande");
         detailTourneButton.setBounds(600, 200,250,50);
         panel.add(detailTourneButton);
         detailTourneButton.addActionListener(this);
 
-        detailTypeDechet = new JButton("Voir les quantités par type de déchet");
+        detailTypeDechet = new JButton("Voir les quantitï¿½s par type de dï¿½chet");
         detailTypeDechet.setBounds(600, 260,250,50);
         panel.add(detailTypeDechet);
         detailTypeDechet.addActionListener(this);
 
-        nombreTournee = new JButton("Agent ayant réalisé moins de 5 tournées");
+        nombreTournee = new JButton("Agent ayant rï¿½alisï¿½ moins de 5 tournï¿½es");
         nombreTournee.setBounds(600, 320,300,50);
         panel.add(nombreTournee);
         nombreTournee.addActionListener(this);
+
+        entrepriseDemande = new JButton("Entreprises ayant plus de demandes que Formalys ");
+        entrepriseDemande.setBounds(600, 380,300,50);
+        panel.add(entrepriseDemande);
+        entrepriseDemande.addActionListener(this);
 
         frame.setVisible(true);
 
@@ -121,6 +126,9 @@ public class SecondFrame extends JFrame implements ActionListener {
         } else if (e.getSource() == nombreTournee) {
             dispose();
             NombreTournee nombreTournee = new NombreTournee();
+        }else if (e.getSource() == entrepriseDemande){
+            dispose();
+            EntrepriseDemande demandeEntreprise =  new EntrepriseDemande();
         }
     }
 
