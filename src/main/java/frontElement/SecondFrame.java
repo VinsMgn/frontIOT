@@ -21,6 +21,12 @@ public class SecondFrame extends JFrame implements ActionListener {
     private JButton nombreTournee;
     private JButton entrepriseDemande;
 
+    private JLabel columnName1;
+    private JLabel columnName2;
+    private JLabel columnName3;
+    private JLabel columnName4;
+
+
     private ArrayList<Tournee> myList = new ArrayList<>();
     private JPanel panel;
 
@@ -54,14 +60,34 @@ public class SecondFrame extends JFrame implements ActionListener {
         };
         String[] columnNames = { "N� Tourn�e", "Date", "Immat Camion", "Employ�" };
 
+        columnName1 = new JLabel("N� Tourn�e");
+        columnName1.setBounds(10,40,80,50);
+        panel.add(columnName1);
+
+        columnName2 = new JLabel("Date");
+        columnName2.setBounds(140,40,80,50);
+        panel.add(columnName2);
+
+        columnName3 = new JLabel("Immatriculation");
+        columnName3.setBounds(270,40,120,50);
+        panel.add(columnName3);
+
+        columnName4 = new JLabel("Employ�");
+        columnName4.setBounds(400,40,80,50);
+        panel.add(columnName4);
 
         table = new JTable(data,columnNames);
-        table.setBounds(10, 50, 500, 500);
+        table.setBounds(10, 80, 500, 500);
         panel.add(table.getTableHeader(), BorderLayout.NORTH);
         panel.add(table, BorderLayout.CENTER);
 
+<<<<<<< HEAD
         JLabel informationTournee = new JLabel("Informations sur les tourn�es");
         informationTournee.setBounds(350,15,200,50);
+=======
+        JLabel informationTournee = new JLabel("Informations sur les tourn�es");
+        informationTournee.setBounds(150,580,200,50);
+>>>>>>> 6bb05f6... add first label
         panel.add(informationTournee);
 
         empButton = new JButton("Voir les employ�s");

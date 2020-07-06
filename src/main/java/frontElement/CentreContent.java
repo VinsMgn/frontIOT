@@ -21,7 +21,7 @@ public class CentreContent extends JFrame implements ActionListener {
         JFrame frame = new JFrame();
         frame.setSize(800,800);
         frame.setTitle("Monitoring Application");
-        frame.setDefaultCloseOperation(EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(HIDE_ON_CLOSE);
         frame.add(panel);
         panel.setLayout(null);
 
