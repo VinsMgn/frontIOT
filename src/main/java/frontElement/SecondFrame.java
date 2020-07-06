@@ -58,9 +58,9 @@ public class SecondFrame extends JFrame implements ActionListener {
                 { myList.get(9).getNoTournee().toString(),myList.get(9).getDateTournee().toString(), myList.get(9).getNoImmatCamion(), myList.get(9).getNoEmploye() },
                 { myList.get(10).getNoTournee().toString(),myList.get(10).getDateTournee().toString(), myList.get(10).getNoImmatCamion(), myList.get(10).getNoEmploye() },
         };
-        String[] columnNames = { "Nï¿½ Tournï¿½e", "Date", "Immat Camion", "Employï¿½" };
+        String[] columnNames = { "Num Tournée", "Date", "Immat Camion", "Employe" };
 
-        columnName1 = new JLabel("Nï¿½ Tournï¿½e");
+        columnName1 = new JLabel("N° Tournée");
         columnName1.setBounds(10,40,80,50);
         panel.add(columnName1);
 
@@ -72,7 +72,7 @@ public class SecondFrame extends JFrame implements ActionListener {
         columnName3.setBounds(270,40,120,50);
         panel.add(columnName3);
 
-        columnName4 = new JLabel("Employï¿½");
+        columnName4 = new JLabel("Employé");
         columnName4.setBounds(400,40,80,50);
         panel.add(columnName4);
 
@@ -81,16 +81,11 @@ public class SecondFrame extends JFrame implements ActionListener {
         panel.add(table.getTableHeader(), BorderLayout.NORTH);
         panel.add(table, BorderLayout.CENTER);
 
-<<<<<<< HEAD
-        JLabel informationTournee = new JLabel("Informations sur les tournï¿½es");
-        informationTournee.setBounds(350,15,200,50);
-=======
-        JLabel informationTournee = new JLabel("Informations sur les tournï¿½es");
+        JLabel informationTournee = new JLabel("Informations sur les tournées");
         informationTournee.setBounds(150,580,200,50);
->>>>>>> 6bb05f6... add first label
         panel.add(informationTournee);
 
-        empButton = new JButton("Voir les employï¿½s");
+        empButton = new JButton("Voir les employés");
         empButton.setBounds(600,20,150,50);
         panel.add(empButton);
         empButton.addActionListener(this);
@@ -101,29 +96,29 @@ public class SecondFrame extends JFrame implements ActionListener {
         panel.add(centreButton);
         centreButton.addActionListener(this);
 
-        tourneeButton = new JButton("Voir une demande ï¿½ partir d'une date");
+        tourneeButton = new JButton("Voir une demande à partir d'une date");
         tourneeButton.setBounds(600, 140,250,50);
         panel.add(tourneeButton);
         tourneeButton.addActionListener(this);
 
 
-        detailTourneButton = new JButton("Voir les dï¿½tails d'une demande");
+        detailTourneButton = new JButton("Voir les details d'une demande");
         detailTourneButton.setBounds(600, 200,250,50);
         panel.add(detailTourneButton);
         detailTourneButton.addActionListener(this);
 
-        detailTypeDechet = new JButton("Voir les quantitï¿½s par type de dï¿½chet");
+        detailTypeDechet = new JButton("Voir les quantités par type de déchet");
         detailTypeDechet.setBounds(600, 260,250,50);
         panel.add(detailTypeDechet);
         detailTypeDechet.addActionListener(this);
 
-        nombreTournee = new JButton("Agent ayant rï¿½alisï¿½ moins de 5 tournï¿½es");
+        nombreTournee = new JButton("Agent ayant réalisé moins de 5 tournées");
         nombreTournee.setBounds(600, 320,300,50);
         panel.add(nombreTournee);
         nombreTournee.addActionListener(this);
 
         entrepriseDemande = new JButton("Entreprises ayant plus de demandes que Formalys ");
-        entrepriseDemande.setBounds(600, 380,300,50);
+        entrepriseDemande.setBounds(600, 380,350,50);
         panel.add(entrepriseDemande);
         entrepriseDemande.addActionListener(this);
 

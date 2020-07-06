@@ -33,7 +33,7 @@ public class EmployeeContent extends JFrame implements ActionListener {
 
     public EmployeeContent() {
         JFrame frame = new JFrame();
-        frame.setSize(800,800);
+        frame.setSize(550,400);
         frame.setTitle("Monitoring Application");
         frame.setDefaultCloseOperation(HIDE_ON_CLOSE);
         frame.add(panel);
@@ -74,6 +74,18 @@ public class EmployeeContent extends JFrame implements ActionListener {
         column2 = new JLabel("Prénom");
         column2.setBounds(110,10,80,50);
         panel.add(column2);
+
+        column3 = new JLabel("Date d'embauche");
+        column3.setBounds(210,10,120,50);
+        panel.add(column3);
+
+        column4 = new JLabel("Salaire");
+        column4.setBounds(320,10,80,50);
+        panel.add(column4);
+
+        column5 = new JLabel("Fonction");
+        column5.setBounds(410,10,80,50);
+        panel.add(column5);
 
 
 
