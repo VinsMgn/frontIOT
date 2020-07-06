@@ -20,6 +20,12 @@ public class EmployeeContent extends JFrame implements ActionListener {
     private ArrayList<User> myList = new ArrayList<>();
     private JTable table;
 
+    private JLabel column1;
+    private JLabel column2;
+    private JLabel column3;
+    private JLabel column4;
+    private JLabel column5;
+
 
     public static void main(String[] args) {
         EmployeeContent frame = new EmployeeContent();
@@ -53,13 +59,21 @@ public class EmployeeContent extends JFrame implements ActionListener {
 
         String[] columnNames = { "Nom", "Prénom", "Date d'embauche", "Salaire", "Fonction" };
         table = new JTable(data,columnNames);
-        table.setBounds(10, 50, 500, 500);
+        table.setBounds(10, 50, 500, 250);
         panel.add(table.getTableHeader(), BorderLayout.NORTH);
         panel.add(table, BorderLayout.CENTER);
 
         JLabel informationEmployee = new JLabel("Informations sur les employés");
-        informationEmployee.setBounds(350,15,200,50);
+        informationEmployee.setBounds(150,290,200,50);
         panel.add(informationEmployee);
+
+        column1 = new JLabel("Nom");
+        column1.setBounds(10,10,80,50);
+        panel.add(column1);
+
+        column2 = new JLabel("Prénom");
+        column2.setBounds(110,10,80,50);
+        panel.add(column2);
 
 
 
