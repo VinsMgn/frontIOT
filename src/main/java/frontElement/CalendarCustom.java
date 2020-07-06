@@ -25,7 +25,7 @@ public class CalendarCustom extends JFrame implements ActionListener {
     public CalendarCustom() {
         frame = new JFrame();
         frame.setSize(350,200);
-        frame.setTitle("Monitoring Application");
+        frame.setTitle("Choisir une date");
         frame.setDefaultCloseOperation(HIDE_ON_CLOSE);
         frame.add(panel);
         panel.setLayout(null);

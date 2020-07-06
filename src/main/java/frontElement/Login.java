@@ -65,7 +65,7 @@ public class Login extends JFrame implements ActionListener {
         dispose();
         SecondFrame frame = new SecondFrame();
 
-//        if (user.equalsIgnoreCase("admin") && password.equalsIgnoreCase("password")) {
+//        if (user.equalsIgnoreCase("D_SDAN") && password.equalsIgnoreCase("D_SDAN")) {
 //            succes.setText("Login successful!");
 //            dispose();
 //            SecondFrame frame = new SecondFrame();
