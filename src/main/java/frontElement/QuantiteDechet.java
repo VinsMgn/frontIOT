@@ -60,6 +60,10 @@ public class QuantiteDechet extends JFrame implements ActionListener {
         panel.add(table.getTableHeader(), BorderLayout.NORTH);
         panel.add(table, BorderLayout.CENTER);
 
+        JLabel informationTournee = new JLabel("Informations sur la quantité de types de déchet collecté");
+        informationTournee.setBounds(110,290,350,50);
+        panel.add(informationTournee);
+
         frame.setVisible(true);
     }
 
