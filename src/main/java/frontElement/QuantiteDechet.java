@@ -14,15 +14,18 @@ public class QuantiteDechet extends JFrame implements ActionListener {
     private JTable table;
     private ArrayList<TypeDechet> typeDechets = new ArrayList<>();
 
+    private JLabel column1;
+    private JLabel column2;
+
     public static void main(String[] args) {
         QuantiteDechet quantiteDechet = new QuantiteDechet();
     }
 
     public QuantiteDechet() {
         frame = new JFrame();
-        frame.setSize(1000,800);
+        frame.setSize(540,400);
         frame.setTitle("Monitoring Application");
-        frame.setDefaultCloseOperation(EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(HIDE_ON_CLOSE);
         frame.add(panel);
         panel.setLayout(null);
 
@@ -41,13 +44,25 @@ public class QuantiteDechet extends JFrame implements ActionListener {
                 {typeDechets.get(10).getNomTypeDechet(), "2700"},
                 {typeDechets.get(11).getNomTypeDechet(), "2800"},
         };
-        String[] columnNames = { "Type de déchet", "Quantité collectée"
-        };
+        String[] columnNames = { "Type de déchet", "Quantité collectée"};
+
+        column1 = new JLabel("Type de déchet");
+        column1.setBounds(10,10,120,50);
+        panel.add(column1);
+
+        column2 = new JLabel("Quantité collectée (en kg)");
+        column2.setBounds(280,10,180,50);
+        panel.add(column2);
+
 
         table = new JTable(data, columnNames);
-        table.setBounds(10, 50, 500, 500);
+        table.setBounds(10, 50, 500, 250);
         panel.add(table.getTableHeader(), BorderLayout.NORTH);
         panel.add(table, BorderLayout.CENTER);
+
+        JLabel informationTournee = new JLabel("Informations sur la quantité de types de déchet collecté");
+        informationTournee.setBounds(110,290,350,50);
+        panel.add(informationTournee);
 
         frame.setVisible(true);
     }

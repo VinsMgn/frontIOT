@@ -13,15 +13,21 @@ public class CentreContent extends JFrame implements ActionListener {
     private ArrayList<CentreTraitement> myList = new ArrayList<>();
     private JTable table;
 
+    private JLabel column1;
+    private JLabel column2;
+    private JLabel column3;
+    private JLabel column4;
+    private JLabel column5;
+
     public static void main(String[] args) {
         CentreContent frame = new CentreContent();
     }
     
     public CentreContent() {
         JFrame frame = new JFrame();
-        frame.setSize(800,800);
+        frame.setSize(700,400);
         frame.setTitle("Monitoring Application");
-        frame.setDefaultCloseOperation(EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(HIDE_ON_CLOSE);
         frame.add(panel);
         panel.setLayout(null);
 
@@ -36,13 +42,34 @@ public class CentreContent extends JFrame implements ActionListener {
 
         String[] columnNames = { "Nom du centre", "N° de rue", "Rue", "Code Postal", "Ville" };
         table = new JTable(data,columnNames);
-        table.setBounds(10, 50, 600, 500);
+        table.setBounds(10, 50, 600, 250);
         panel.add(table.getTableHeader(), BorderLayout.NORTH);
         panel.add(table, BorderLayout.CENTER);
 
         JLabel informationEmployee = new JLabel("Informations sur les centres de traitement");
-        informationEmployee.setBounds(350,15,350,50);
+        informationEmployee.setBounds(150,290,250,50);
         panel.add(informationEmployee);
+
+
+        column1 = new JLabel("Nom du centre");
+        column1.setBounds(10,10,100,50);
+        panel.add(column1);
+
+        column2 = new JLabel("N° de rue");
+        column2.setBounds(150,10,100,50);
+        panel.add(column2);
+
+        column3 = new JLabel("Rue");
+        column3.setBounds(270,10,50,50);
+        panel.add(column3);
+
+        column4 = new JLabel("Code postal");
+        column4.setBounds(380,10,100,50);
+        panel.add(column4);
+
+        column5 = new JLabel("Ville");
+        column5.setBounds(500,10,100,50);
+        panel.add(column5);
 
 
         frame.setVisible(true);
