@@ -33,9 +33,9 @@ public class DetailDemande extends JFrame implements ActionListener {
         frame.add(panel);
         panel.setLayout(null);
 
-        entreprise = initEntreprise();
+        entreprise = initEntreprise(noTourneeParam);
         String[][] data = {
-                {entreprise.getRaisonSociale(), this.noTournee, "120"}
+                {entreprise.getRaisonSociale(), this.noTournee, "150"}
         };
         String[] columnNames = { "Raison sociale", "N° Tournée", "Quantité de type de déchet" };
 
@@ -56,7 +56,7 @@ public class DetailDemande extends JFrame implements ActionListener {
         columnName3.setBounds(310,10,200,50);
         panel.add(columnName3);
 
-        JLabel informationTournee = new JLabel("Informations sur la demande n°3");
+        JLabel informationTournee = new JLabel("Informations sur la demande n°" + noTourneeParam);
         informationTournee.setBounds(150,280,200,50);
         panel.add(informationTournee);
 
@@ -73,8 +73,13 @@ public class DetailDemande extends JFrame implements ActionListener {
     }
 
 
-    public Entreprise initEntreprise() {
+    public Entreprise initEntreprise(String param) {
         Entreprise entreprise = new Entreprise(1234567890, "Energym", 10, "Boulevard de Pontoise",95000,"Pontoise",0134205236, "Mme servant");
+        if(param.equals("3")) {
+            entreprise.setRaisonSociale("Formalys");
+        } else if (param.equals("4")) {
+            entreprise.setRaisonSociale("La clef des champs");
+        }
         return entreprise;
     }
 }
